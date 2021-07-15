@@ -11,7 +11,6 @@ const Header = () => {
                     <li><Link className="nav-link" to="/new">New Stories</Link></li>
                     <li><Link className="nav-link"  to="/best">Best Stories</Link></li>
                 </ul>
-                {/* <span></span> */}
             </nav>
         </div>
     )

@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Body from "./components/Body";
 import Header from "./components/Header";
 import Home from "./components/Home";
-import "./App.scss"
+import "./App.scss";
 function App() {
   return (
     <div className="App">
@@ -21,7 +21,10 @@ function App() {
             <Body newsType={"best"} />
           </Route>
           <Route path="*">
-            <div className="loading">Error</div>
+            <div className="home" style={{ fontSize: "50px" }}>
+              Page Not Found,
+              Error 404
+            </div>
           </Route>
         </Switch>
       </Router>

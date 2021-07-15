@@ -18,6 +18,7 @@ const Body = ({ newsType }) => {
       });
   }, [newsType]);
 
+  // Loader
   if (data.length === 0) {
     return (
       <div className="loading-container">
@@ -31,10 +32,11 @@ const Body = ({ newsType }) => {
     );
   }
 
+  // Pegination
   const storiesPerPage = 10;
   const pagesVisited = pageNumber * storiesPerPage;
-
   const pageCount = Math.ceil(data.length / storiesPerPage);
+
   const changePage = ({ selected }) => {
     setPageNumber(selected);
   };
@@ -60,7 +62,6 @@ const Body = ({ newsType }) => {
 
   return (
     <div className="body">
-      {displayUsers}
       <ReactPaginate
         previousLabel={"Previous"}
         nextLabel={"Next"}
@@ -74,6 +75,7 @@ const Body = ({ newsType }) => {
         disabledClassName={"disable"}
         activeClassName={"active-btn"}
       />
+      {displayUsers}
     </div>
   );
 };
